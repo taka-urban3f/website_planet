@@ -1,0 +1,20 @@
+:root {
+    --color-turquoise: #00FFF5;
+    --color-gray: #BFBFBF;
+}
+
+html {
+    font-size: 100%;
+    font-family: "Exo", "Noto Sans JP", Meiryo, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", sans-serif;
+    line-height: 1;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+@function p2r($pixel) {
+    @return $pixel / 16 * 1rem;
+}

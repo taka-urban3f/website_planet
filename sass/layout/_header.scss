@@ -1,0 +1,51 @@
+//-----------------------------------------------------------------------
+// _header.scss
+//-----------------------------------------------------------------------
+@use '../foundation/base'as b;
+
+.l-header {
+    font-size: b.p2r(13);
+    font-weight: bold;
+    line-height: (14 / 13);
+
+    &__bar {
+        padding-top: 23px;
+        padding-bottom: 23px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(black 0%, rgb(0 0 0 / .62) 69%, rgb(0 0 0 / 0) 100%);
+    }
+
+    &__heading {
+        width: 120px;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 20px;
+        color: var(--color-turquoise);
+    }
+
+    &__soundButton {
+        display: block;
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+        margin-left: auto;
+        margin-right: 0;
+        color: var(--color-gray);
+
+        &::after {
+            display: block;
+            content: '';
+            margin-left: 6px;
+            width: 15px;
+            height: 15px;
+            background-image: url(../img/sound.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+}
