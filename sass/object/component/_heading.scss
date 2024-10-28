@@ -1,0 +1,23 @@
+//-----------------------------------------------------------------------
+// _heading.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.c-sectionHeading {
+    position: relative;
+    font-size: b.p2r(50);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-turquoise);
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        bottom: -12px;
+        left: 0;
+        height: 6px;
+        width: 60px;
+        background-color: var(--color-turquoise);
+    }
+}
