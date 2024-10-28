@@ -4,9 +4,14 @@
 @use '../foundation/base'as b;
 
 .l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     font-size: b.p2r(13);
     font-weight: bold;
     line-height: (14 / 13);
+    z-index: 1;
 
     &__bar {
         padding-top: 23px;
