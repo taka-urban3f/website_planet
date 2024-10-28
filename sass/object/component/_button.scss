@@ -1,0 +1,14 @@
+//-----------------------------------------------------------------------
+// _button.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.c-playBtn {
+    display: block;
+    width: fit-content;
+    padding: 20px 41px;
+    background-color: var(--color-turquoise);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+}

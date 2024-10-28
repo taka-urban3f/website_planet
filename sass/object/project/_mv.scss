@@ -1,0 +1,145 @@
+//-----------------------------------------------------------------------
+// _mv.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.p-mv {
+    position: relative;
+
+    &__ctn {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__heading {
+        margin-left: calc(40 / 390 * 100vw);
+
+        &__desc {
+            display: block;
+            font-size: calc(22 / 390 * 100vw);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+
+        &__title {
+            display: block;
+            margin-top: calc(20 / 390 * 100vw);
+            font-size: calc(76 / 390 * 100vw);
+            font-weight: 600;
+            line-height: (68.4 / 76);
+            letter-spacing: 0.05em;
+        }
+
+        &__catch {
+            display: block;
+            margin-top: calc(10 / 390 * 100vw);
+            font-size: calc(22 / 390 * 100vw);
+            font-weight: 500;
+            line-height: (29 / 22);
+            letter-spacing: 0.6em;
+        }
+    }
+
+    &__btn {
+        margin-top: calc(30 / 390 * 100vw);
+        margin-left: calc(40 / 390 * 100vw);
+    }
+
+    &__scrollPrompt {
+        position: absolute;
+        padding: 5px 0 9px;
+        bottom: 29px;
+        left: 34px;
+        font-size: b.p2r(13);
+        font-weight: 700;
+        color: var(--color-turquoise);
+        writing-mode: vertical-rl;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: -13px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: var(--color-turquoise);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: -17px;
+            top: 0px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-turquoise);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            animation: ballDown 2s linear infinite;
+        }
+    }
+
+    &__signageBox {
+        $padding: 8px;
+        $fontSize: 12;
+
+        position: absolute;
+        bottom: 50px;
+        right: 20px;
+        width: 200px;
+        height: calc(b.p2r($fontSize) + ($padding * 2));
+        padding: $padding 0;
+        background-color: black;
+        border: 1px solid var(--color-turquoise);
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: b.p2r($fontSize);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: var(--color-turquoise);
+
+        &__signageText {
+            position: absolute;
+            animation: scrollSignage 7s linear infinite;
+            
+            &__date {
+                color: white;
+            }
+        }
+        
+    }
+}
+
+@keyframes ballDown {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 100%;
+    }
+}
+
+
+@keyframes scrollSignage {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+        transform: translateX(-100%);
+    }
+}
