@@ -5,8 +5,23 @@
 
 .p-trailer {
     position: relative;
+    padding: 50px 0;
     background-color: var(--color-turquoise);
 
     @include b.section_deco_top('../img/turquoise_top.svg');
     @include b.section_deco_bottom('../img/turquoise_bottom.svg');
+
+    &__heading {
+        color: black;
+
+        &::after {
+            background-color: black;
+        }
+    }
+
+    &__youtube {
+        margin-top: 45px;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
 }

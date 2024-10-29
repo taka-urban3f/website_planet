@@ -1,0 +1,13 @@
+//-----------------------------------------------------------------------
+// _footer.scss
+//-----------------------------------------------------------------------
+@use '../foundation/base'as b;
+
+.l-footer {
+    position: relative;
+    padding: 70px 0 20px;
+    background-color: black;
+
+    @include b.section_deco_top('../img/black_top.svg');
+
+}
