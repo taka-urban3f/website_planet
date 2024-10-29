@@ -7,7 +7,7 @@ html {
     font-size: 100%;
     font-family: "Exo", "Noto Sans JP", Meiryo, "Hiragino Kaku Gothic ProN",
         "Hiragino Sans", sans-serif;
-        font-weight: 400;
+    font-weight: 400;
     line-height: 1;
     color: white;
 }
@@ -21,7 +21,7 @@ img {
     @return $pixel / 16 * 1rem;
 }
 
-@mixin section_deco_top($path){
+@mixin section_deco_top($path) {
     &::before {
         position: absolute;
         content: '';
@@ -30,10 +30,12 @@ img {
         top: -28px;
         right: 0;
         background-image: url($path);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
-@mixin section_deco_bottom($path){
+@mixin section_deco_bottom($path) {
     &::after {
         position: absolute;
         content: '';
@@ -42,5 +44,7 @@ img {
         bottom: -28px;
         left: 0;
         background-image: url($path);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

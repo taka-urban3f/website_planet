@@ -1,0 +1,20 @@
+//-----------------------------------------------------------------------
+// _play.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.p-play {
+    padding: 70px 0;
+
+    &__heading {
+        margin-bottom: 20px;
+        font-size: calc(32 / 390 * 100vw);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}

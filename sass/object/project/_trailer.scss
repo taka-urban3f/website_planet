@@ -1,0 +1,12 @@
+//-----------------------------------------------------------------------
+// _trailer.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.p-trailer {
+    position: relative;
+    background-color: var(--color-turquoise);
+
+    @include b.section_deco_top('../img/turquoise_top.svg');
+    @include b.section_deco_bottom('../img/turquoise_bottom.svg');
+}
