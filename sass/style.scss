@@ -1,10 +1,10 @@
 @charset 'utf-8';
 
 @use 'foundation/base';
-@use 'layout/header';
-@use 'layout/footer';
 @use 'object/component/button';
 @use 'object/component/heading';
+@use 'layout/header';
+@use 'layout/footer';
 @use 'object/project/bgVideo';
 @use 'object/project/mv';
 @use 'object/project/story';

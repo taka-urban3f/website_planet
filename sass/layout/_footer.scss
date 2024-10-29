@@ -5,9 +5,26 @@
 
 .l-footer {
     position: relative;
-    padding: 70px 0 20px;
+    padding: 40px 0 20px;
     background-color: black;
 
     @include b.section_deco_top('../img/black_top.svg');
 
+    &__flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__copy {
+        margin: 30px 0 44px;
+        font-size: b.p2r(11);
+        line-height: (14 / 11);
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+
+    &__btn {
+        width: 100%;
+        text-align: center;
+    }
 }
