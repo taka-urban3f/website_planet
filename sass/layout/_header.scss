@@ -33,6 +33,8 @@
     }
 
     &__soundButton {
+        $this: &;
+
         display: block;
         display: flex;
         align-items: center;
@@ -47,10 +49,31 @@
             margin-left: 6px;
             width: 15px;
             height: 15px;
-            background-image: url(../img/sound.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            background-color: var(--color-gray);
+            mask-image: url(../img/sound.png);
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+
+        &__captionOn {
+            display: none;
+        }
+
+        &--on {
+            color: white;
+
+            &::after {
+                background-color: white;
+            }
+
+            #{$this}__captionOn {
+                display: inline;
+            }
+    
+            #{$this}__captionOff {
+                display: none;
+            }
         }
     }
 }
