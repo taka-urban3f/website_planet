@@ -39,6 +39,9 @@
 
     &__imgCtn {
         margin-top: 30px;
+        width: 90%;
         box-shadow: 7px 7px 0 var(--color-turquoise);
+        transform-origin: bottom;
+        transform: skew(-5deg);
     }
 }
