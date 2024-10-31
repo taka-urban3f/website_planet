@@ -2,7 +2,6 @@
 
 const elem_bgmButton = document.querySelector('.l-header__soundButton');
 if (elem_bgmButton) {
-    console.log('click');
     elem_bgmButton.addEventListener('click', function () {
         const elem_bgm = document.querySelector('#bgm');
         if (elem_bgm) {
@@ -16,3 +15,8 @@ if (elem_bgmButton) {
         }
     });
 }
+
+window.addEventListener('load', function(){
+    console.log('aa');
+    document.querySelector('.p-loading').style.display = 'none';
+});

@@ -1,0 +1,95 @@
+//-----------------------------------------------------------------------
+// _loading.scss
+//-----------------------------------------------------------------------
+@use '../../foundation/base'as b;
+
+.p-loading {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background-color: black;
+    font-size: b.p2r(15);
+    color: var(--color-turquoise);
+    z-index: 10;
+
+    &__text {
+        display: block;
+        padding-top: 100px;
+    }
+
+    &__circle {
+        position: absolute;
+        display: block;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: currentColor;
+    }
+
+    &__spinnerCtn {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &__spinner {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+
+            &:nth-child(1){
+                border-top: 3px solid transparent;
+                border-left: 3px solid currentColor;
+                animation: spin1 2s linear infinite;
+            }
+
+            &:nth-child(2){
+                border-top: 3px solid transparent;
+                border-left: 3px solid currentColor;
+                animation: spin2 2s linear infinite;
+            }
+
+            &:nth-child(3){
+                border-top: 3px solid transparent;
+                border-left: 3px solid currentColor;
+                animation: spin3 2s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes spin1 {
+    0% {
+        transform:  rotateX(70deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(70deg) rotateZ(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotateZ(240deg) rotateX(70deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(240deg) rotateX(70deg) rotateZ(360deg);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        transform: rotateZ(120deg) rotateX(70deg) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(120deg) rotateX(70deg) rotateZ(360deg);
+    }
+}

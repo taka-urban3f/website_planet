@@ -16,6 +16,14 @@
 
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <noscript>
+        <style>
+            .p-loading {
+                display: none;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -35,6 +43,16 @@
     </header>
 
     <main class="l-main">
+        <div class="p-loading">
+            <span class="p-loading__text">Loading</span>
+            <span class="p-loading__circle"></span>
+            <div class="p-loading__spinnerCtn">
+                <span class="p-loading__spinnerCtn__spinner"></span>
+                <span class="p-loading__spinnerCtn__spinner"></span>
+                <span class="p-loading__spinnerCtn__spinner"></span>
+            </div>
+        </div>
+
         <div class="p-bgVideo">
             <video src="media/bg_movie.mp4" autoplay loop muted playsinline poster="img/video_poster.png" class="p-bgVideo__video"></video>
         </div>
