@@ -17,6 +17,5 @@ if (elem_bgmButton) {
 }
 
 window.addEventListener('load', function(){
-    console.log('aa');
     document.querySelector('.p-loading').style.display = 'none';
 });

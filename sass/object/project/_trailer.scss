@@ -11,6 +11,10 @@
     @include b.section_deco_top('../img/turquoise_top.svg');
     @include b.section_deco_bottom('../img/turquoise_bottom.svg');
 
+    @include b.mq(pc) {
+        padding: 110px 0;
+    }
+
     &__heading {
         color: black;
 
@@ -23,5 +27,9 @@
         margin-top: 45px;
         width: 100%;
         aspect-ratio: 16 / 9;
+
+        @include b.mq(pc) {
+            margin-top: 70px;
+        }
     }
 }

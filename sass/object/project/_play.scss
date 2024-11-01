@@ -6,12 +6,20 @@
 .p-play {
     padding: 70px 0;
 
+    @include b.mq(pc) {
+        padding: 100px 0;
+    }
+
     &__heading {
         margin-bottom: 20px;
-        font-size: calc(32 / 390 * 100vw);
+        font-size: min(calc(32 / 390 * 100vw), b.p2r(64));
         font-weight: 700;
         letter-spacing: 0.05em;
         text-align: center;
+
+        @include b.mq(pc) {
+            margin-bottom: 25px;
+        }
     }
 
     &__btn {

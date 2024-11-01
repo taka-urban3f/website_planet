@@ -10,7 +10,19 @@
 
     @include b.section_deco_top('../img/black_top.svg');
 
-    &__flex {
+    @include b.mq(pc) {
+        padding: 40px 0 40px;
+    }
+
+    &__inner {
+        @include b.mq(pc) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__sns {
         display: flex;
         align-items: center;
     }
@@ -21,10 +33,20 @@
         line-height: (14 / 11);
         letter-spacing: 0.05em;
         text-align: center;
+
+        @include b.mq(pc) {
+            margin: 0;
+            font-size: b.p2r(14);
+            line-height: 1;
+        }
     }
 
     &__btn {
         width: 100%;
         text-align: center;
+
+        @include b.mq(pc) {
+            display: none;
+        }
     }
 }
