@@ -13,23 +13,50 @@
     line-height: (14 / 13);
     z-index: 1;
 
+    @include b.mq(pc) {
+        font-size: b.p2r(16);
+        line-height: 1;
+        letter-spacing: 0.1em;
+    }
+
     &__bar {
-        padding-top: 23px;
-        padding-bottom: 23px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         background-image: linear-gradient(black 0%, rgb(0 0 0 / .62) 69%, rgb(0 0 0 / 0) 100%);
+
+        &__inner {
+            padding: 23px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include b.mq(pc) {
+                padding: 28px 0;
+            }
+        }
     }
 
     &__heading {
         width: 120px;
+
+        @include b.mq(pc) {
+            width: 172px;
+        }
     }
 
     &__list {
         display: flex;
+        align-items: center;
         column-gap: 20px;
         color: var(--color-turquoise);
+    }
+
+    &__btn {
+        display: none;
+        padding: 15px 40px;
+        font-size: b.p2r(15);
+
+        @include b.mq(pc) {
+            display: block;
+        }
     }
 
     &__soundButton {
@@ -42,6 +69,12 @@
         margin-left: auto;
         margin-right: 0;
         color: var(--color-gray);
+
+        @include b.mq(pc) {
+            margin-top: -6px;
+            font-size: b.p2r(13);
+            line-height: (16 / 13);
+        }
 
         &::after {
             display: block;
@@ -70,7 +103,7 @@
             #{$this}__captionOn {
                 display: inline;
             }
-    
+
             #{$this}__captionOff {
                 display: none;
             }

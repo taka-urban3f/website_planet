@@ -3,7 +3,33 @@
 //-----------------------------------------------------------------------
 @use '../../foundation/base'as b;
 
+// .u-wrapper {
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     max-width: 1440px;
+//     margin: 0 auto;
+
+//     @include b.mq(pc) {
+//         padding-left: 165px;
+//         padding-right: 165px;
+//     }
+// }
+
 .u-wrapper {
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.u-wrapperLarge {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1420px;
+    margin: 0 auto;
+
+    @include b.mq(pc) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

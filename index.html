@@ -28,16 +28,19 @@
 
 <body>
     <header class="l-header">
-        <div class="l-header__bar u-wrapper">
-            <h1 class="l-header__heading"><a href="index.html"><img src="img/Necopon games.svg" alt=""></a></h1>
-            <nav class="l-header__gnav">
-                <ul class="l-header__list">
-                    <li class="l-header__gnav__item"><a href="">STORY</a></li>
-                    <li class="l-header__gnav__item"><a href="">TRAILER</a></li>
-                </ul>
-            </nav>
+        <div class="l-header__bar">
+            <div class="l-header__bar__inner u-wrapperLarge">
+                <h1 class="l-header__heading"><a href="index.html"><img src="img/Necopon games.svg" alt=""></a></h1>
+                <nav class="l-header__gnav">
+                    <ul class="l-header__list">
+                        <li class="l-header__gnav__item"><a href="">STORY</a></li>
+                        <li class="l-header__gnav__item"><a href="">TRAILER</a></li>
+                        <li class="l-header__gnav__item"><a href="#" class="c-playBtn l-header__btn">PLAY NOW</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="u-wrapper">
+        <div class="u-wrapperLarge">
             <button class="l-header__soundButton">SOUND&nbsp;<span class="l-header__soundButton__captionOff">OFF</span><span class="l-header__soundButton__captionOn">ON</span></button>
         </div>
     </header>
@@ -60,17 +63,23 @@
         <audio src="media/cinematic-melody-main-9785.mp3" loop id="bgm"></audio>
 
         <section class="p-mv">
-            <div class="p-mv__ctn">
-                <h2 class="p-mv__heading">
-                    <span class="p-mv__heading__desc">VR GAME</span>
-                    <span class="p-mv__heading__title">Planet<br>Hunters</span>
-                    <span class="p-mv__heading__catch">惑星を奪還せよ</span>
-                </h2>
-                <a href="#" class="c-playBtn p-mv__btn">PLAY NOW</a>
+            <div class="u-wrapper">
+                <div class="p-mv__ctn">
+                    <h2 class="p-mv__heading">
+                        <span class="p-mv__heading__desc">VR GAME</span>
+                        <span class="p-mv__heading__title">Planet<br>Hunters</span>
+                        <span class="p-mv__heading__catch">惑星を奪還せよ</span>
+                    </h2>
+                    <a href="#" class="c-playBtn p-mv__btn">PLAY NOW</a>
+                </div>
             </div>
-            <span class="p-mv__scrollPrompt">Scroll</span>
-            <div class="p-mv__signageBox">
-                <p class="p-mv__signageBox__signageText"><span class="p-mv__signageBox__signageText__date">30.02.20</span> バージョン5.6リリース：アバター・アイテム大量追加</p>
+            <div class="u-wrapperLarge">
+                <span class="p-mv__scrollPrompt">Scroll</span>
+                <div class="p-mv__signageCtn">
+                    <div class="p-mv__signageBox">
+                        <p class="p-mv__signageBox__signageText"><span class="p-mv__signageBox__signageText__date">30.02.20</span> バージョン5.6リリース：アバター・アイテム大量追加</p>
+                    </div>
+                </div>
             </div>
         </section>
 

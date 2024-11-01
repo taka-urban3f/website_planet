@@ -10,14 +10,24 @@
     letter-spacing: 0.05em;
     color: var(--color-turquoise);
 
+    @include b.mq(pc) {
+        font-size: b.p2r(80);
+    }
+
     &::after {
         position: absolute;
         display: block;
         content: '';
-        bottom: -12px;
+        bottom: -18px;
         left: 0;
         height: 6px;
         width: 60px;
         background-color: var(--color-turquoise);
+
+        @include b.mq(pc) {
+            bottom: -34px;
+            height: 8px;
+            width: 80px;
+        }
     }
 }

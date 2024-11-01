@@ -14,19 +14,23 @@
     }
 
     &__heading {
-        margin-left: calc(40 / 390 * 100vw);
+        margin-left: 20px;
+
+        @include b.mq(pc) {
+            margin-left: 0;
+        }
 
         &__desc {
             display: block;
-            font-size: calc(22 / 390 * 100vw);
+            font-size: min(calc(22 / 390 * 100vw), b.p2r(32));
             font-weight: 700;
             letter-spacing: 0.2em;
         }
 
         &__title {
             display: block;
-            margin-top: calc(20 / 390 * 100vw);
-            font-size: calc(76 / 390 * 100vw);
+            margin-top: min(calc(20 / 390 * 100vw), 30px);
+            font-size: min(calc(76 / 390 * 100vw), b.p2r(140));
             font-weight: 600;
             line-height: (68.4 / 76);
             letter-spacing: 0.05em;
@@ -34,17 +38,26 @@
 
         &__catch {
             display: block;
-            margin-top: calc(10 / 390 * 100vw);
-            font-size: calc(22 / 390 * 100vw);
+            margin-top: min(calc(10 / 390 * 100vw), 10px);
+            font-size: min(calc(22 / 390 * 100vw), b.p2r(34));
             font-weight: 500;
             line-height: (29 / 22);
             letter-spacing: 0.6em;
+
+            @include b.mq(pc) {
+                line-height: 1;
+                letter-spacing: 1em;
+            }
         }
     }
 
     &__btn {
-        margin-top: calc(30 / 390 * 100vw);
-        margin-left: calc(40 / 390 * 100vw);
+        margin-top: min(calc(30 / 390 * 100vw), 50px);
+        margin-left: 20px;
+
+        @include b.mq(pc) {
+            margin-left: 0;
+        }
     }
 
     &__scrollPrompt {
@@ -56,6 +69,11 @@
         font-weight: 700;
         color: var(--color-turquoise);
         writing-mode: vertical-rl;
+
+        @include b.mq(pc) {
+            left: initial;
+            margin-left: 14px;
+        }
 
         &::before {
             position: absolute;
@@ -81,6 +99,13 @@
         }
     }
 
+    &__signageCtn {
+        @include b.mq(pc) {
+            // 親の左右パディングを子absolute要素に提供する。
+            position: relative;
+        }
+    }
+
     &__signageBox {
         $padding: 8px;
         $fontSize: 12;
@@ -100,15 +125,19 @@
         letter-spacing: 0.05em;
         color: var(--color-turquoise);
 
+        @include b.mq(pc) {
+            width: 360px;
+        }
+
         &__signageText {
             position: absolute;
             animation: scrollSignage 7s linear infinite;
-            
+
             &__date {
                 color: white;
             }
         }
-        
+
     }
 }
 
