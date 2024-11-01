@@ -17,4 +17,10 @@
         font-size: b.p2r(18);
         line-height: 20px;
     }
+
+    &:hover {
+        color: white;
+        box-shadow: 0 0 10px white;
+        text-shadow: 0 0 10px white;
+    }
 }
