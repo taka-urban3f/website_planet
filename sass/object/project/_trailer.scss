@@ -31,5 +31,10 @@
         @include b.mq(pc) {
             margin-top: 70px;
         }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
