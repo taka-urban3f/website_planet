@@ -15,14 +15,13 @@
     @include b.section_deco_bottom('../img/black_bottom.svg');
 
     @include b.mq(pc) {
-        padding: 158px 0;
+        padding: 140px 0;
     }
 
     &__flex {
         @include b.mq(pc) {
             display: flex;
             justify-content: space-between;
-            align-items: center;
 
             &+& {
                 margin-top: 90px;
@@ -36,7 +35,13 @@
 
     &__ctn {
         @include b.mq(pc) {
+            margin-top: 18px;
             width: 53%;
+
+            &--alignCenter {
+                margin-top: 0;
+                align-self: center;
+            }
         }
 
         &__subHeading {
@@ -83,6 +88,7 @@
         transform: skew(-5deg);
 
         @include b.mq(pc) {
+            margin-top: 0;
             width: 40%;
         }
     }

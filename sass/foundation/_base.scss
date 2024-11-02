@@ -36,6 +36,8 @@ img {
         @include mq(pc) {
             width: 430px;
             height: 40px;
+            top: -38px;
+
         }
     }
 }
@@ -55,6 +57,7 @@ img {
         @include mq(pc) {
             width: 430px;
             height: 40px;
+            bottom: -38px;
         }
     }
 }

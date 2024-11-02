@@ -25,7 +25,7 @@
         background-color: var(--color-turquoise);
 
         @include b.mq(pc) {
-            bottom: -34px;
+            bottom: -30px;
             height: 8px;
             width: 80px;
         }
